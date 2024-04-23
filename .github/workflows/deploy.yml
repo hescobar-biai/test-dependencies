@@ -27,10 +27,21 @@ jobs:
         git config --local user.email "${{ github.actor }}@users.noreply.github.com"
         git config --local user.name "${{ github.actor }}"
 
+    - name: Determine version bump
+      id: version_bump
+      run: |
+        if [[ "${{ github.event.release.tag_name }}" == *"-major"* ]]; then
+          echo "::set-output name=part::major"
+        elif [[ "${{ github.event.release.tag_name }}" == *"-minor"* ]]; then
+          echo "::set-output name=part::minor"
+        else
+          echo "::set-output name=part::patch"
+        fi
+
     - name: Bump version and create tag
       if: github.event_name == 'release'
       run: |
-        bump2version patch --commit --tag
+        bump2version ${{ steps.version_bump.outputs.part }} --commit --tag
         git push --follow-tags
 
     - name: Build and publish to Google Artifact Registry
