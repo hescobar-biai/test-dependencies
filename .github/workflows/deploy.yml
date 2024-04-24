@@ -39,6 +39,9 @@ jobs:
         fi
 
     - name: Print selected PART
+      run: echo "Selected PART for version bump is ${{ github.event.release.tag_name }}"
+
+    - name: Print selected PART
       run: echo "Selected PART for version bump is ${{ env.PART }}"
 
     - name: Bump version and create tag
