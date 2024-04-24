@@ -38,8 +38,8 @@ jobs:
           echo "PART=patch" >> $GITHUB_ENV
         fi
 
-    - name: Print selected PART
-      run: echo "Selected PART for version bump is ${{ github.event.release.tag_name }}"
+    - name: Print selected tag_name
+      run: echo "Selected tag_name for version bump is ${{ github.event.release.tag_name }}"
 
     - name: Print selected PART
       run: echo "Selected PART for version bump is ${{ env.PART }}"
