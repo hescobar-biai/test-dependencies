@@ -26,7 +26,7 @@ jobs:
       run: |
         git config --local user.email "${{ github.actor }}@users.noreply.github.com"
         git config --local user.name "${{ github.actor }}"
-      - name: Determine version bump
+    - name: Determine version bump
       id: version_bump
       run: |
         if [[ "${{ github.event.release.tag_name }}" == *"-major"* ]]; then
