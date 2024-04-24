@@ -36,3 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation updates:
   - Composed a comprehensive `README.md` for project setup and usage.
   - Initialized `CHANGELOG.md` for tracking project changes.
+
+### Added [0.2.0] - 2024-04-24
+ -  new functions 
+  - `return_number_float()`: Returns a predefined float.

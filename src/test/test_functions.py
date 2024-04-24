@@ -10,5 +10,9 @@ class TestDemoFunctions(unittest.TestCase):
         """Test that return_number returns the expected number."""
         self.assertEqual(return_number(), 42)
 
+    def test_return_number_float(self):
+        """Test that return_number returns the expected number."""
+        self.assertEqual(return_number(), 42.5)
+
 if __name__ == '__main__':
     unittest.main()
