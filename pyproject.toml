@@ -7,7 +7,7 @@ where = ["src"]
 
 [project]
 name = "demo"
-version = "0.1.0"
+version = "0.0.0"
 authors = [{ name = "Hernando Escobar", email = "hernando@biai.tech" },{ name = "Julian Iguavita", email = "julian@biai.tech" }]
 description = "demo test"
 readme = "README.md"
