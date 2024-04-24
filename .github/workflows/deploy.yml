@@ -36,6 +36,7 @@ jobs:
           echo "PART=minor" >> $GITHUB_ENV
         else
           echo "PART=patch" >> $GITHUB_ENV
+        fi
 
     - name: Print selected PART
       run: echo "Selected PART for version bump is ${{ env.PART }}"
