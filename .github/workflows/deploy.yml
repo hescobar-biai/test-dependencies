@@ -30,16 +30,16 @@ jobs:
     - name: Determine version bump
       id: version_bump
       run: |
-        if [[ "${{ github.event.release.tag_name }}" == *"-major"* ]]; then
+        if [[ "${{ github.event.release.name }}" == *"-major"* ]]; then
           echo "PART=major" >> $GITHUB_ENV
-        elif [[ "${{ github.event.release.tag_name }}" == *"-minor"* ]]; then
+        elif [[ "${{ github.event.release.name }}" == *"-minor"* ]]; then
           echo "PART=minor" >> $GITHUB_ENV
         else
           echo "PART=patch" >> $GITHUB_ENV
         fi
 
     - name: Print selected tag_name
-      run: echo "Selected tag_name for version bump is ${{ github.event.release.tag_name }}"
+      run: echo "Selected tag_name for version bump is ${{ github.event.release.name }}"
 
     - name: Print selected PART
       run: echo "Selected PART for version bump is ${{ env.PART }}"
