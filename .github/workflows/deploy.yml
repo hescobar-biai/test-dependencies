@@ -37,6 +37,9 @@ jobs:
         else
           echo "PART=patch" >> $GITHUB_ENV
 
+    - name: Print selected PART
+      run: echo "Selected PART for version bump is ${{ env.PART }}"
+
     - name: Bump version and create tag
       if: github.event_name == 'release'
       run: |
