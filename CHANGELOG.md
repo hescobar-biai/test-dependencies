@@ -40,3 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added [0.2.0] - 2024-04-24
  -  new functions 
   - `return_number_float()`: Returns a predefined float.
+
+
+### Removed [2.0.0] - 224-04-24
+- remove  function return_number ()
